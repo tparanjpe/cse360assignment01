@@ -2,6 +2,7 @@ package cse360assignment01;
 
 public class AddingMachine {
     private int total;
+    private String result = "0";
 
     /**
      * Creates an Adding Machine object
@@ -11,26 +12,29 @@ public class AddingMachine {
     }
 
     /**
-     * Gets the first and last name of this Student.
-     * @return this Student's name.
+     * Returns the total value
+     * @return value of "total" variable.
      */
     public int getTotal () {
-        return 0;
+        return total;
     }
 
     /**
      * Adds the value passed in
-     * @param integer value for desired addition
+     * @param value for desired addition
      */
     public void add (int value) {
-
+        total+=value;
+        result += " + " + value;
     }
 
     /**
      * Subtract the value passed in
-     * @param integer value for desired subtraction
+     * @param value for desired subtraction
      */
     public void subtract (int value) {
+        total-=value;
+        result += " - " + value;
 
     }
     /**
@@ -38,12 +42,26 @@ public class AddingMachine {
      * @returns string output of referenced value
      */
     public String toString () {
-        return "";
+        return result;
     }
     /**
-     * Clears
+     * Clears AddingMachine object
      */
     public void clear() {
+        total = 0;
+    }
+
+    /**
+     * Calls the main function to create AddingMachine object and
+     */
+    public static void main(String args[]){
+        AddingMachine myCalculator = new AddingMachine();
+        myCalculator.add(4);
+        myCalculator.subtract(2);
+        myCalculator.add(5);
+        String resString = myCalculator.toString();
+        System.out.println(resString);
 
     }
 }
+
