@@ -1,3 +1,12 @@
+/**
+ * This AddingMachine file creates a calculator that begins at 0 and adds
+ * and subtracts values from the total value.
+ *
+ * @author  Tara Paranjpe
+ * @version 1.0
+ * @since   2020-10-06
+ */
+
 package cse360assignment01;
 
 public class AddingMachine {
